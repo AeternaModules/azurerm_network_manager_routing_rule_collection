@@ -14,7 +14,7 @@ EOT
     name                          = string
     network_group_ids             = list(string)
     routing_configuration_id      = string
-    bgp_route_propagation_enabled = optional(bool, false)
+    bgp_route_propagation_enabled = optional(bool) # Default: false
     description                   = optional(string)
   }))
 }

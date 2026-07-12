@@ -1,3 +1,7 @@
+output "network_manager_routing_rule_collections_id" {
+  description = "Map of id values across all network_manager_routing_rule_collections, keyed the same as var.network_manager_routing_rule_collections"
+  value       = { for k, v in azurerm_network_manager_routing_rule_collection.network_manager_routing_rule_collections : k => v.id }
+}
 output "network_manager_routing_rule_collections_bgp_route_propagation_enabled" {
   description = "Map of bgp_route_propagation_enabled values across all network_manager_routing_rule_collections, keyed the same as var.network_manager_routing_rule_collections"
   value       = { for k, v in azurerm_network_manager_routing_rule_collection.network_manager_routing_rule_collections : k => v.bgp_route_propagation_enabled }
